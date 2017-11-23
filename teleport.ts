@@ -1,6 +1,10 @@
 const magik = magikcraft.io;
 
 function teleport() {
-    const where = magik.exmemento();
-     magik.ianuae(where);
+     const memory = magik.exmemento();
+     if (memory[where]) {
+         magik.ianuae(memory[where]);
+     } else {
+         magik.dixit(`I don't remember ${where}!`);
+     }
 }
